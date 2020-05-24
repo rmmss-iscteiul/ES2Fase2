@@ -1,5 +1,6 @@
 package ES2_2019_EIC12_15.HelloWorld;
 
+import java.util.concurrent.TimeUnit;
 
 /**
  * Classe "Hello world!" simples para 1a fase do projeto de ES2
@@ -25,13 +26,21 @@ public class App
 	 */
     public static void main( String[] args )
     {
+    	while(true) {
     	System.out.println( "Hello World! 1" );
     	System.out.println( "Hello World! 2" );
     	System.out.println( "Hello World! 3" );
     	System.out.println( "Hello World! 4" );
     	System.out.println( "Hello World! 5" );
     	System.out.println( "Hello World! 6" );
-    }
+    	try {
+			TimeUnit.SECONDS.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	}
+    	}
     
     
     
