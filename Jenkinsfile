@@ -1,5 +1,5 @@
 def dockeruser = "rmmssiscte"
-def imagename = "projetofase2"
+def imagename = "projetoes"
 def container = "projetoes"
 node {
    echo 'Building Docker Image'
@@ -13,7 +13,7 @@ stage('Build Docker Imagae'){
     }
     
 stage('Stop Existing Container'){
-     powershell "docker stop ${container}"
+     powershell "docker stop ${imagename}"
     }
     
 stage('Remove Existing Container'){
